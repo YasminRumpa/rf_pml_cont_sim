@@ -1,4 +1,4 @@
-#install.packages(c("glmnet", "randomForest", "e1071", "data.table", "doParallel") , repos = "http://cran.us.r-project.org")
+install.packages(c("glmnet", "randomForest", "e1071", "data.table", "doParallel") , repos = "http://cran.us.r-project.org")
 library(glmnet)
 library(randomForest)
 library(e1071)
@@ -346,4 +346,5 @@ summary_results <- results[, .(Avg_MSE = mean(Test_MSE, na.rm = TRUE),
                                Avg_CPU = mean(CPU_time, na.rm = TRUE)),
                            by = .(Scenario, Model)]
 print(summary_results)
+
 
